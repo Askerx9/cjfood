@@ -1,0 +1,106 @@
+form{
+  margin: 0 auto;
+  width: 500px;
+  background: #fef7e6;
+  padding: 30px;
+  @media (max-width: 678px){
+    width: 100%;
+    box-sizing: border-box;
+  }
+  fieldset{
+    margin-bottom: 2em;
+    div{
+      margin-bottom: 5px;
+    }
+  }
+  input, textarea{
+    // background: #eee;
+    // border: 1px solid #ddd;
+    border: 1px solid rgba($color: #f6a81c, $alpha: .2);
+    border-radius: 3px;
+    // color: #666
+  }
+  input{
+    padding: 5px 10px;
+    &[type= text], &[type= email]{
+      width: 100%;
+    }
+  }
+  textarea{
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  button{
+    width: 100%;
+    padding: 8px 0;
+    background: $primaryColor;
+    color: #fff;
+    text-transform: uppercase;
+  }
+
+  input[type="radio"] {
+    display: none;
+    +label {
+      // color: white;
+      // font-weight: bold;
+      // font-size: 1rem;
+      cursor: pointer;
+      user-select: none;
+      border-radius: 5px;
+      // background: #FFF;
+      border: 1px solid rgba($color: #f6a81c, $alpha: .2);
+
+      display: inline-block;
+      margin: 10px 10px;
+      padding: 5px 10px;
+      position: relative;
+      &:first-of-type{
+        margin-left: 0;
+      }
+      // &::before {
+      //   transition: all 250ms cubic-bezier(.4,.25,.3,1);
+      //   content: "";
+      //   width: 10px;
+      //   height: 10px;
+      //   border-radius: 50%;
+      //   background-color: black;
+      //   border: 0px solid black;
+      //   font-size: 0;
+      //   position: absolute;
+      //   left: 0;
+      //   top: 50%;
+      //   transform: translate(0, -50%);
+      //   transform-origin: 50% 50%;
+      // }
+
+      // &::after {
+      //   transition: all 250ms cubic-bezier(.4,.25,.3,1);
+      //   content: "";
+      //   width: 0;
+      //   height: 0;
+      //   border-radius: 50%;
+      //   background-color: black;
+      //   position: absolute;
+      //   left: 0;
+      //   top: 50%;
+      //   transform: translate(50%, -50%);
+      //   transform-origin: 50% 50%;
+      // }
+    }
+    &:checked + label{
+      border-color: #78be43;
+      &::before {
+        background-color: transparent;
+        width: 15px;
+        height: 15px;
+        border-width: 2px;
+      }
+
+      &::after {
+        width: 10px;
+        height: 10px;
+      }
+    }
+  }
+}

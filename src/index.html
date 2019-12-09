@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CJ fruit</title>
+  <link rel="stylesheet" href="./scss/main.scss">
+  <link rel="icon" href="images/favicon.png" />
+</head>
+<body>
+
+  <header id="home">
+    <nav class="nav">
+      <a href="#home" class="logo">CJ fuit</a>
+      <div>
+        <ul>
+          <li class="nav__el"><a href="#home">Home</a></li>
+          <!-- <li class="nav__el"><a href="#product">Nos produits</a></li> -->
+          <li class="nav__el"><a href="#about">À propos</a></li>
+          <li class="nav__el"><a href="#contact">Contact</a></li>
+        </ul>
+        <a class="lang" href="en.html">EN</a>
+      </div>
+    </nav>
+    <div class="container content">
+      <h1 class="title">CJ Fruits</h1>
+      <p>multi spécialiste du fruit</p>
+    </div>
+  </header>
+
+  <main>
+
+    <div id="about" class="section">
+      <!-- <h2 class="title subtitle">À propos</h2> -->
+      <section class="container content">
+        <img src="images/product/product_coconut.jpg" alt="coconut">
+        <div class="wrapper center">
+            <h3 class="title subtitle">Histoire et positionnement</h3>
+            <p>CJ Fruits est une entreprise familiale, importatrice, grossiste, installée à Bruxelles. C’est en étant à l’écoute des tendances du marché et des réglementations sanitaires que nous sommes devenus un véritable multi spécialiste du fruit, en perpétuelle évolution. Nous apportons un soin particulier dans la sélection de nos producteurs, chacun spécialiste dans leur domaine. Cela nous permet de proposer une gamme large qui couvre la quasi-totalité des fruits permanents, de saison ou de contre-saison en conventionnel</p>
+        </div>
+      </section>
+
+      <section>
+        <ul class="product__list">
+          <li><img src="images/product/product_ananas.jpg" alt="ananas"></li>
+          <li><img src="images/product/product_avocado.jpg" alt="avocado"></li>
+          <li><img src="images/product/product_banana.jpg" alt="banana"></li>
+          <li><img src="images/product/product_mandarine.jpg" alt="mandarine"></li>
+        </ul>
+      </section>
+
+      <section class="container content">
+        <div class="wrapper">
+            <h3 class="title subtitle">Notre vision</h3>
+            <p>
+              La nutrition est un facteur clé pour être en bonne santé. Manger 5 fruits et légumes par jour reste un enjeu majeur de santé publique. C’est ce qui anime l’équipe CJ Fruits au quotidien.
+            </p>
+        </div>
+        <img src="images/bannière-fruit-étoile.jpg" alt="coconut">
+      </section>
+
+      <section class="hero content">
+        <img src="images/about.jpg" alt="">
+
+        <div class="wrapper">
+            <h3 class="title subtitle">Nos convictions & ambitions</h3>
+            <p>
+                Le fruit est un aliment pour toutes les générations, toujours tendance, qui associe accessibilité, simplicité, plaisir, forme et bien-être.
+            </p>
+            <ul>
+              <li>
+                  <span class="strong">Accessibilité</span><br> il existe une large gamme de fruits moins chère qu’une pâtisserie, une viennoiserie, un coupe-faim.
+              </li>
+              <li>
+                  <span class="strong">Simplicité/praticité</span><br> il y a toujours un fruit que l’on peut emporter, où que l’on soit, qui ne nécessite aucune préparation ou couvert pour être dégusté.
+              </li>
+              <li>
+                  <span class="strong">Plaisir</span><br>la variété de fruits permet de satisfaire tous les goûts. Du coupe-faim à la corbeille de dégustation, seul ou en accompagnement, il fait toujours plaisir à consommer ou à offrir.
+              </li>
+              <li>
+                  <span class="strong">Forme et bien-être</span><br>
+                  être en bonne santé, c’est simple comme un fruit.
+              </li>
+            </ul>
+        </div>
+      </section>
+
+      <section class="container content">
+        <div class="wrapper">
+          <h3 class="title subtitle">Nos clients</h3>
+          <p>Nous intervenons exclusivement en <abbr title="business to business">B2B</abbr>, essentiellement sur le territoire Belge et Hollandais mais également en Europe. Nous distinguons nos clients de la manière suivante&nbsp;:</p>
+          <ul>
+            <li><span class="strong">Les « direct B2C » </span><br> les détaillants, qui représentent l’essentiel de notre activité</li>
+            <li><span class="strong">Les « intermédiaires »</span><br> les grossistes, semi-grossistes, centrales</li>
+            <li><span class="strong">Pure player</span><br>Les intervenant du e-commerce qui commercialisent exclusivement sur internet</li>
+          </ul>
+        </div>
+        <img src="images/client_bg.jpg" alt="coconut">
+      </section>
+    </div>
+
+    <section class="container section">
+      <h2 class="title subtitle">Nos atouts</h2>
+      <ul class="atouts">
+        <li>
+          <img src="images/atouts/fraicheur.png" alt="">
+          <p>Fraîcheur des produits</p>
+        </li>
+        <li>
+          <img src="images/atouts/qualité.png" alt="">
+          <p>Qualité et sécurité</p>
+        </li>
+        <li>
+          <img src="images/atouts/choix.png" alt="">
+          <p>Choix, volume, prix</p>
+        </li>
+        <li>
+          <img src="images/atouts/service.png" alt="">
+          <p>Service et conseils</p>
+        </li>
+        <li>
+          <img src="images/atouts/gain.png" alt="">
+          <p>Gain de temps</p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="contact" class="container section">
+        <h2 class="title subtitle">Contactez-nous !</h2>
+        <form action="http://local.food.be/sendEmail.php" method="POST">
+
+
+          <fieldset>
+            <p class="strong">Vous êtes :</p>
+            <div>
+                <input type="radio" value="male" id="male" name="genre">
+                <label for="male">
+                    M.
+                  </label>
+                <input type="radio" value="female" id="female" name="genre">
+                <label for="female">
+                  Mme.
+                </label>
+            </div>
+
+
+            <div>
+              <!-- <label for="firstname">Prénom </label> -->
+              <input type="text" name="firstname" id="firstname" placeholder="Prénom">
+            </div>
+
+            <div>
+              <!-- <label for="lastname">Nom </label> -->
+              <input type="text" name="lastname" id="lastname" placeholder="Nom">
+            </div>
+
+            <div>
+              <!-- <label for="mail">E-mail </label> -->
+              <input type="email" name="mail" id="mail" placeholder="Email">
+            </div>
+
+            <input type="radio" value="distibuteur" id="distibuteur" name="type">
+            <label for="distibuteur">
+              Distibuteur
+            </label>
+            <input type="radio" value="producteur" id="producteur" name="type">
+            <label for="producteur">
+              Producteur
+            </label>
+            <input type="radio" value="other" id="other" name="type">
+            <label for="other">
+              Autre
+            </label>
+          </fieldset>
+
+          <fieldset>
+            <p class="strong">Vous souhaitez être contacté :</p>
+            <div>
+              <input type="radio" value="today" id="today" name="day">
+              <label for="today">
+                  Aujourd'hui
+              </label>
+              <input type="radio" value="tomorow" id="tomorow" name="day">
+              <label for="tomorow">
+                  Demain
+              </label>
+              <input type="radio" value="other_day" id="other_day" name="day">
+              <label for="other_day">
+                  Autre jour
+              </label>
+            </div>
+
+            <div>
+              <input type="radio" value="6h30-8h30" id="1" name="time">
+              <label for="1">
+                  6h30-8h30
+              </label>
+              <input type="radio" value="8h30-10h30" id="2" name="time">
+              <label for="2">
+                  8h30-10h30
+              </label>
+              <input type="radio" value="10h30-12h30" id="3" name="time">
+              <label for="3">
+                  10h30-12h30
+              </label>
+              <input type="radio" value="12h30-14h30" id="4" name="time">
+              <label for="4">
+                  12h30-14h30
+              </label>
+            </div>
+          </fieldset>
+
+          <textarea name="mail_content" id="" cols="30" rows="10"></textarea>
+
+          <button>Envoyer</button>
+
+        </form>
+    </section>
+  </main>
+
+  <footer>
+
+        <div>
+          <h3 class="title subtitle">Adresses</h3>
+          <p>
+              CJ Fruits<br>
+              Nering 28, 1650 Beersel, Belgique<br>
+              Bosstraat 11, 1702 Dilbeek , Belgique
+          </p>
+        </div>
+
+        <div>
+          <h3 class="title subtitle">Contacts</h3>
+          <p>
+              Tél. : <a href="">+32 (0)484 33 08 58</a><br>
+              E-mail : <a href="mailto:info@cj-batifruits.com">info@cj-batifruits.com</a>
+          </p>
+        </div>
+
+  </footer>
+
+
+  <script src="./javascript/index.js"></script>
+</body>
+
+</html>

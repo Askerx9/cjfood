@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css?family=Lato|Playfair+Display:700&display=swap');
+
+
+body{
+  font-family: 'Lato', sans-serif;
+  line-height: 1.4;
+  // color: #ffffff;
+  @media (max-width: 1281px){
+    font-size: 14px;
+  }
+}
+
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+  @media (max-width: 1281px){
+    width: 90%
+  }
+}
+
+.section{
+  margin-bottom: 100px;
+}
+
+.strong{
+  font-weight: bold;
+}
+
+.logo{
+  background: url(/images/logo.svg) no-repeat center;
+  width: 150px;
+  height: 70px;
+  overflow: hidden;
+  text-indent: -9999px;
+}
+
+a{
+  transition: color .3s ease-in-out;
+  &:hover{
+    color: $primaryColor;
+  }
+}

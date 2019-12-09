@@ -1,0 +1,25 @@
+.product__list{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 100px;
+  & li{
+    margin-right: 40px;
+    overflow: hidden;
+    @media (max-width: 1000px){
+      margin-right: 10px;
+    }
+
+    & img {
+      display: block;
+      transition: transform .3s ease-in-out;
+    }
+
+    &:hover img{
+      transform: scale(1.1);
+    }
+
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+}

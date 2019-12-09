@@ -1,0 +1,17 @@
+footer{
+  background-color: #FEF7E6;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 25vh;
+  @media (max-width: 1000px){
+    flex-direction: column;
+    height: auto;
+    padding: 20px 0;
+  }
+  & div, & div .subtitle{
+    text-align: center;
+    margin-bottom: 5px;
+    margin-top: 10px;
+  }
+}
