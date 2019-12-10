@@ -1,25 +1,20 @@
 <?php
-  // die(var_dump($_POST));
-  $to = $_POST['mail'];
+  header("Access-Control-Allow-Origin: *");
+
+  $to = "info@cjfood.be";
+  // $to = "morrensj@gmail.com";
+
   $subject = "Envoi via le formulaire de contact";
 
-  $message = "
-    <html>
-    <head>
-      <title>Envoi via le formulaire de contact</title>
-    </head>
-    <body>
-      <p>".$_POST['genre']." ".$_POST['lastname']." ".$_POST['firstname']."</p>
-      <p>".$_POST['type']."</p>
-      <p>Preference de prise de contact: ".$_POST['day']." à ".$_POST['time']."</p>
-      <p>".$_POST['mail_content']."</p>
-    </body>
-    </html>
-    ";
+  $content = $_POST['genre'].` `.$_POST['lastname'].` `.$_POST['firstname'] . "\r\n" .$_POST['mail'] ."\r\n". $_POST['type'] . "\r\n" . 'Preference de prise de contact: '.$_POST['day'].' à '.$_POST['time'] ."\r\n". $_POST['mail_content'];
 
-  $headers[] = 'MIME-Version: 1.0';
-  $headers[] = 'Content-type: text/html; charset=iso-8859-1';
+  $headers = 'From: info@cjfood.be' . "\r\n" .
+    'Reply-To: info@cjfood.be' . "\r\n" .
+    'X-Mailer: PHP/' . phpversion();
 
-  // var_dump($message);
+    // var_dump($headers);
 
-  mail($to, $subject, $message, implode("\r\n", $headers));
+
+  if(mail($to, $subject, $content, $headers)){
+    print 'Mail envoyé';
+  };
