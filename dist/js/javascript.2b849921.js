@@ -12,4 +12,4 @@ var e;!function(t,n){"function"==typeof e&&e.amd?e(n):"object"==typeof exports?m
 },{}],"rEqs":[function(require,module,exports) {
 "use strict";var e=o(require("scrollmagic")),t=o(require("gsap")),r=o(require("gsap/ScrollToPlugin"));function o(e){return e&&e.__esModule?e:{default:e}}t.default.registerPlugin(r.default);var l=new e.default.Controller({globalSceneOptions:{triggerHook:"onLeave"}});new e.default.Scene({offset:document.querySelector("header").clientHeight}).on("enter leave",function(e){e.progress?(t.default.fromTo(".nav",{y:"-100%"},{y:"0%",duration:.75}),document.querySelector(".nav").classList.add("sticky")):document.querySelector(".nav").classList.toggle("sticky")}).addTo(l);for(var n=document.querySelectorAll(".nav__el a"),a=0;a<n.length;a++){var u=n[a];u.addEventListener("click",function(e){e.preventDefault();var r=this.getAttribute("href");t.default.to(window,{duration:2,scrollTo:{y:r,offsetY:100}})})}
 },{"scrollmagic":"Vvar","gsap":"TpQl","gsap/ScrollToPlugin":"jhqH"}]},{},["rEqs"], null)
-//# sourceMappingURL=/js/javascript.2b849921.js.map
+//# sourceMappingURL=/javascript.2b849921.js.map

@@ -1,11 +1,11 @@
-header{
-  height: 600px;
+header {
+  height: 95vh;
   background: url(/images/header_bg.jpg) no-repeat center;
   background-size: cover;
   position: relative;
   margin-bottom: 100px;
-  &::after{
-    content: "";
+  &::after {
+    content: '';
     width: 100%;
     height: 15px;
     background: url(/images/header_separator.svg);
@@ -17,12 +17,21 @@ header{
     left: 0;
   }
 
-  .content{
+  .content {
     color: #fff;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: calc(100% - 190px);
+    height: calc(100% - 280px);
     text-align: center;
+    .logo-title {
+      height: 300px;
+      width: 300px;
+      background: url(/images/logo_header.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      margin: 0 auto;
+    }
   }
 }

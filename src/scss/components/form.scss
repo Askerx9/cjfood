@@ -1,62 +1,105 @@
-form{
+form {
   margin: 0 auto;
-  width: 500px;
-  background: #fef7e6;
+  background: $white;
+  -webkit-box-shadow: 3px 2px 22px -5px rgba(0, 0, 0, 0.34);
+  -moz-box-shadow: 3px 2px 22px -5px rgba(0, 0, 0, 0.34);
+  box-shadow: 3px 2px 22px -5px rgba(0, 0, 0, 0.34);
+
   padding: 30px;
-  @media (max-width: 678px){
+  @media (max-width: 678px) {
     width: 100%;
     box-sizing: border-box;
   }
-  fieldset{
+  .strong {
+    margin-bottom: 20px;
+    font-size: 1.2em;
+  }
+  fieldset {
     margin-bottom: 2em;
-    div{
+    div {
       margin-bottom: 5px;
     }
   }
-  input, textarea{
+  input,
+  textarea {
     // background: #eee;
     // border: 1px solid #ddd;
-    border: 1px solid rgba($color: #f6a81c, $alpha: .2);
+    border: 1px solid rgba($color: #f6a81c, $alpha: 0.2);
     border-radius: 3px;
+    background: #e8e8e8;
     // color: #666
   }
-  input{
+  input {
+    &:first-child {
+      margin-right: 20px;
+    }
+    margin-bottom: 10px;
     padding: 5px 10px;
-    &[type= text], &[type= email]{
+    &[type='text'],
+    &[type='email'] {
       width: 100%;
+      padding: 0.5em 0 0.5em 0px;
+      padding-left: 20px;
+      background: #e8e8e8;
+      color: $black;
+      font-size: 1em;
+      font-weight: 400;
+      border: none;
+      &::placeholder {
+        color: $black;
+      }
     }
   }
-  textarea{
+  textarea {
     display: block;
     width: 100%;
     margin-bottom: 10px;
+    padding: 15px;
   }
-  button{
+  button {
     width: 100%;
     padding: 8px 0;
-    background: $primaryColor;
+    background: $ctaBackground;
     color: #fff;
     text-transform: uppercase;
+    transition: 0.2s;
+    &:hover {
+      background: #e39100;
+    }
   }
 
-  input[type="radio"] {
+  input[type='radio'] {
     display: none;
-    +label {
+    + label {
       // color: white;
       // font-weight: bold;
       // font-size: 1rem;
       cursor: pointer;
       user-select: none;
-      border-radius: 5px;
+      border-radius: 3px;
       // background: #FFF;
-      border: 1px solid rgba($color: #f6a81c, $alpha: .2);
-
+      border: 1px solid rgba($color: #f6a81c, $alpha: 0.2);
+      background-color: $black;
+      color: $white;
+      width: 115px;
+      text-align: center;
       display: inline-block;
       margin: 10px 10px;
       padding: 5px 10px;
       position: relative;
-      &:first-of-type{
-        margin-left: 0;
+      @media (max-width: 410px) {
+        width: 90%;
+        margin: 10px 0px;
+      }
+
+      &:hover {
+        background-color: $primaryColor;
+      }
+      &:first-of-type {
+        margin-left: 0px;
+        @media (max-width: 728px) and (min-width: 410px) {
+          margin-left: 10px;
+        }
       }
       // &::before {
       //   transition: all 250ms cubic-bezier(.4,.25,.3,1);
@@ -88,8 +131,8 @@ form{
       //   transform-origin: 50% 50%;
       // }
     }
-    &:checked + label{
-      border-color: #78be43;
+    &:checked + label {
+      background-color: $primaryColor;
       &::before {
         background-color: transparent;
         width: 15px;
