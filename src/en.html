@@ -152,11 +152,11 @@
         <fieldset>
           <p class="strong">You are :</p>
           <div>
-            <input type="radio" value="male" id="male" name="genre">
+            <input type="radio" value="male" id="male" name="genre" required>
             <label for="male">
               M.
             </label>
-            <input type="radio" value="female" id="female" name="genre">
+            <input type="radio" value="female" id="female" name="genre" required>
             <label for="female">
               Mme.
             </label>
@@ -165,27 +165,27 @@
 
           <div class="flex">
             <!-- <label for="firstname">Prénom </label> -->
-            <input type="text" name="firstname" id="firstname" placeholder="firstname">
+            <input type="text" name="firstname" id="firstname" placeholder="firstname" required>
 
             <!-- <label for="lastname">Nom </label> -->
-            <input type="text" name="lastname" id="lastname" placeholder="lastname">
+            <input type="text" name="lastname" id="lastname" placeholder="lastname" required>
           </div>
 
 
           <div>
             <!-- <label for="mail">E-mail </label> -->
-            <input type="email" name="mail" id="mail" placeholder="Email">
+            <input type="email" name="mail" id="mail" placeholder="Email" required>
           </div>
 
-          <input type="radio" value="distributeur" id="distributeur" name="type">
+          <input type="radio" value="distributeur" id="distributeur" name="type" required>
           <label for="distributeur">
             Distributor
           </label>
-          <input type="radio" value="producteur" id="producteur" name="type">
+          <input type="radio" value="producteur" id="producteur" name="type" required>
           <label for="producteur">
             Producer
           </label>
-          <input type="radio" value="other" id="other" name="type">
+          <input type="radio" value="other" id="other" name="type" required>
           <label for="other">
             Other
           </label>
@@ -194,41 +194,41 @@
         <fieldset>
           <p class="strong">You want to be contacted :</p>
           <div>
-            <input type="radio" value="today" id="today" name="day">
+            <input type="radio" value="today" id="today" name="day" required>
             <label for="today">
               Today
             </label>
-            <input type="radio" value="tomorow" id="tomorow" name="day">
+            <input type="radio" value="tomorow" id="tomorow" name="day" required>
             <label for="tomorow">
               Tomorrow
             </label>
-            <input type="radio" value="other_day" id="other_day" name="day">
+            <input type="radio" value="other_day" id="other_day" name="day" required>
             <label for="other_day">
               Other day
             </label>
           </div>
 
           <div>
-            <input type="radio" value="6h30-8h30" id="1" name="time">
+            <input type="radio" value="6h30-8h30" id="1" name="time" required>
             <label for="1">
               6h30-8h30
             </label>
-            <input type="radio" value="8h30-10h30" id="2" name="time">
+            <input type="radio" value="8h30-10h30" id="2" name="time" required>
             <label for="2">
               8h30-10h30
             </label>
-            <input type="radio" value="10h30-12h30" id="3" name="time">
+            <input type="radio" value="10h30-12h30" id="3" name="time" required>
             <label for="3">
               10h30-12h30
             </label>
-            <input type="radio" value="12h30-14h30" id="4" name="time">
+            <input type="radio" value="12h30-14h30" id="4" name="time" required>
             <label for="4">
               12h30-14h30
             </label>
           </div>
         </fieldset>
 
-        <textarea name="mail_content" id="" cols="30" rows="10"></textarea>
+        <textarea name="mail_content" id="" cols="30" rows="10" required></textarea>
 
         <button class="strong">Send</button>
 

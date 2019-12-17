@@ -1,9 +1,8 @@
 import ScrollMagic from "scrollmagic"
 import gsap from "gsap"
 import ScrollToPlugin from "gsap/ScrollToPlugin";
+import validate from 'validate.js'
 
-// import logo from '/images/logo_header.svg';
-// import logoText from '/images/logo_text.svg';
 
 gsap.registerPlugin(ScrollToPlugin);
 
@@ -32,20 +31,53 @@ new ScrollMagic.Scene({
 .addTo(controller)
 
 const form = document.querySelector('#contact_form')
+const constraints = {
+  genre: {
+    presence: true
+  },
+  firstname: {
+    presence: true
+  },
+  lastname: {
+    presence: true
+  },
+  mail: {
+    presence: true
+  },
+  type: {
+    presence: true
+  },
+  day: {
+    presence: true
+  },
+  time: {
+    presence: true
+  },
+  mail_content: {
+    presence: true
+  },
+
+}
 
 form.addEventListener('submit', e => {
   e.preventDefault()
 
-  var ajax = new XMLHttpRequest();
-  if (ajax==null) return;
+  const errors = validate(form, constraints)
+  const ajax = new XMLHttpRequest();
+  const data = new FormData(form);
+  const div = document.getElementById("result");
 
-  var data = new FormData(form);
+  if(errors) {
+    div.innerHTML = "Veuillez remplir tous les champs"
+  }
+
+  if (ajax==null || errors) return;
 
   ajax.open("POST", "http://cjfood.be/sendEmail.php", true);
   ajax.onreadystatechange=function () {
     if (ajax.readyState!=4) return;
     if (ajax.status!=200) return;
-    var div = document.getElementById("result");
+
     if (div==null) return;
     while (div.firstChild) div.removeChild(div.firstChild);
     div.appendChild(document.createTextNode(ajax.responseText));
